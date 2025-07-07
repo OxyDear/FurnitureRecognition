@@ -1,0 +1,150 @@
+* {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: #fef9f3;
+        font-family: 'Inter', sans-serif;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        color: #5c4b37;
+        line-height: 1.6;
+    }
+
+    .container {
+        max-width: 700px;
+        width: 100%;
+        background: #fffcf5;
+        border-radius: 16px;
+        box-shadow: 0 8px 30px rgba(232, 190, 141, 0.15);
+        padding: 40px;
+        text-align: center;
+    }
+
+.header {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #e6a756;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    line-height: 1.2;
+}
+.description {
+    margin-bottom: 30px;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #8a7a66;
+}
+
+.input-group {
+    display: flex;
+    margin-bottom: 25px;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(232, 190, 141, 0.2);
+}
+
+input[type="url"] {
+    flex-grow: 1;
+    padding: 18px 25px;
+    font-size: 16px;
+    border: none;
+    background: #fff;
+    color: #5c4b37;
+}
+
+input::placeholder {
+    color: #c4b7a9;
+}
+
+input:focus {
+    outline: none;
+    background: #fffdfa;
+}
+
+button {
+    padding: 0 35px;
+    background: #e6a756;
+    color: white;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #d89640;
+}
+
+.results {
+    margin-top: 35px;
+    text-align: left;
+    animation: fadeIn 0.5s ease;
+}
+
+.results-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0e6d8;
+    font-weight: 400;
+    color: #8a7a66;
+}
+
+.product-list {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(232, 190, 141, 0.1);
+}
+
+.product-item {
+    padding: 18px 25px;
+    border-bottom: 1px solid #f5efe5;
+    transition: background 0.2s;
+}
+
+.product-item:last-child {
+    border-bottom: none;
+}
+
+.product-item:hover {
+    background: #fffaf0;
+}
+
+.empty-state {
+    text-align: center;
+    color: #c4b7a9;
+    padding: 40px 20px;
+    font-style: italic;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    .input-group {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+
+    input[type="url"] {
+        padding: 16px;
+    }
+
+    button {
+        padding: 16px;
+    }
+}

@@ -1,0 +1,113 @@
+{
+  "version": "1.0",
+  "truncation": {
+    "direction": "Right",
+    "max_length": 128,
+    "strategy": "LongestFirst",
+    "stride": 0
+  },
+  "padding": {
+    "strategy": {
+      "Fixed": 128
+    },
+    "direction": "Right",
+    "pad_to_multiple_of": null,
+    "pad_id": 0,
+    "pad_type_id": 0,
+    "pad_token": "[PAD]"
+  },
+  "added_tokens": [
+    {
+      "id": 0,
+      "content": "[PAD]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 1,
+      "content": "[UNK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 2,
+      "content": "[CLS]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 3,
+      "content": "[SEP]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    },
+    {
+      "id": 4,
+      "content": "[MASK]",
+      "single_word": false,
+      "lstrip": false,
+      "rstrip": false,
+      "normalized": false,
+      "special": true
+    }
+  ],
+  "normalizer": null,
+  "pre_tokenizer": {
+    "type": "Whitespace"
+  },
+  "post_processor": null,
+  "decoder": null,
+  "model": {
+    "type": "WordLevel",
+    "vocab": {
+      "[PAD]": 0,
+      "[UNK]": 1,
+      "[CLS]": 2,
+      "[SEP]": 3,
+      "[MASK]": 4,
+      "\n": 5,
+      "&": 6,
+      "15": 7,
+      "Cart": 8,
+      "Checkout": 9,
+      "DFOhome": 10,
+      "Empty.": 11,
+      "Galaxy": 12,
+      "Is": 13,
+      "New": 14,
+      "Pro": 15,
+      "Products": 16,
+      "S24": 17,
+      "Samsung": 18,
+      "Shop": 19,
+      "Ultra": 20,
+      "View": 21,
+      "Your": 22,
+      "arrivals:": 23,
+      "collection": 24,
+      "deals": 25,
+      "entire": 26,
+      "iPhone": 27,
+      "of": 28,
+      "our": 29,
+      "porch": 30,
+      "special": 31,
+      "swings": 32,
+      "|": 33,
+      "×": 34
+    },
+    "unk_token": "[UNK]"
+  }
+}

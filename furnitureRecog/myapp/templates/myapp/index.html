@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Парсер товаров</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="../../static/myapp/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">Furniture Name Recognition</div>
+        <h1 class="description">Введите ссылку на страницу с товарами</h1>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="input-group">
+                <input type="url" name="url" placeholder="https://example.com/products" required>
+                <button type="submit">Анализировать</button>
+            </div>
+        </form>
+
+        {% if products %}
+        <div class="results">
+            <h2 class="results-header">Найдено товаров: {{ products|length }}</h2>
+            <div class="product-list">
+                {% for product in products %}
+                <div class="product-item">{{ product }}</div>
+                {% endfor %}
+            </div>
+        </div>
+        {% else %}
+        <div class="results">
+            <div class="empty-state">
+                Результаты появятся здесь после анализа
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
